@@ -1,0 +1,62 @@
+body {
+	font-family: Verdana, Arial, "Times New Roman";
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	height: 50px;
+	background-color: <%COLOR_HEADER%>;
+	color: white;
+	border: 2px solid #a1a1a1;
+	border-radius: 10px;
+	box-shadow: 4px 4px 5px #888888;
+}
+
+td {
+	text-align: center;
+}
+
+td.bookmark {
+	height: 30px;
+	width: 100%;
+	vertical-align: middle;
+	background-color: <%COLOR_CONTENT%>;
+	color: black;
+	border: 2px solid #a1a1a1;
+	border-radius: 10px;
+	box-shadow: 4px 4px 5px #888888;
+}
+
+td.category {
+	width: 14%;
+	vertical-align: top;
+}
+
+a {
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+} /* unvisited link */
+a:visited {
+	text-decoration: none;
+} /* visited link */
+a:hover {
+	text-decoration: underline;
+} /* mouse over link */
+a:active {
+	text-decoration: underline;
+} /* selected link */
+
+footer {
+/*	background-color: <%COLOR_CONTENT%>;*/
+	color: <%COLOR_HEADER%>;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+	text-align: center;
+}

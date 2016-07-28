@@ -1,0 +1,381 @@
+{
+  "headerColor": "#331A80",
+  "bookmarkColor": "#8099FF",
+  "bookmarksList": [
+    {
+      "url": "http://www.7sur7.be",
+      "name": "7sur7",
+      "category": {
+        "name": "Actu"
+      }
+    },
+    {
+      "url": "http://www.lavenir.net",
+      "name": "l\u0027avenir.net",
+      "category": {
+        "name": "Actu"
+      }
+    },
+    {
+      "url": "http://www.lesoir.be/",
+      "name": "Le Soir",
+      "category": {
+        "name": "Actu"
+      }
+    },
+    {
+      "url": "https://bilnet.lu.bil.com/ssl/trust/index.asp?version\u003dTokenVasco\u0026lang\u003dfr\n\t\t\t",
+      "name": "B.I.L.",
+      "category": {
+        "name": "Banques"
+      }
+    },
+    {
+      "url": "https://www.belfius.be/info/fr/index.aspx",
+      "name": "Belfius",
+      "category": {
+        "name": "Banques"
+      }
+    },
+    {
+      "url": "https://www.bnpparibasfortis.be/portal/start.asp",
+      "name": "BNP Paribas Fortis BE",
+      "category": {
+        "name": "Banques"
+      }
+    },
+    {
+      "url": "https://sites.google.com/site/hondensportsportcanin/Home",
+      "name": "4B",
+      "category": {
+        "name": "Chiens"
+      }
+    },
+    {
+      "url": "http://www.belgianagilityfriends.be/",
+      "name": "B.A.F.",
+      "category": {
+        "name": "Chiens"
+      }
+    },
+    {
+      "url": "http://obediencefcibelgium.wifeo.com/",
+      "name": "B.O.F.",
+      "category": {
+        "name": "Chiens"
+      }
+    },
+    {
+      "url": "http://www.bergerClubArlonais.be",
+      "name": "Berger Club Arlonais",
+      "category": {
+        "name": "Chiens"
+      }
+    },
+    {
+      "url": "http://www.cecespoir.be",
+      "name": "C.E.C. Espoir Ethe",
+      "category": {
+        "name": "Chiens"
+      }
+    },
+    {
+      "url": "http://www.smarteragility.com/",
+      "name": "Smarter Agility",
+      "category": {
+        "name": "Chiens"
+      }
+    },
+    {
+      "url": "http://pc37294:7001/AM-web/accountMaster.faces",
+      "name": "Account Master",
+      "category": {
+        "name": "Clearstream"
+      }
+    },
+    {
+      "url": "http://sappip.deutsche-boerse.de/irj/portal/cats?",
+      "name": "CATS",
+      "category": {
+        "name": "Clearstream"
+      }
+    },
+    {
+      "url": "http://intranet.deutsche-boerse.de/",
+      "name": "Clearstream Intranet",
+      "category": {
+        "name": "Clearstream"
+      }
+    },
+    {
+      "url": "https://mfgw.oa.pnrad.net/vpn/index.html",
+      "name": "Metaframe",
+      "category": {
+        "name": "Clearstream"
+      }
+    },
+    {
+      "url": "file:///N:/appl/SIRE/SireQueries/index.html",
+      "name": "Oufti SIRE",
+      "category": {
+        "name": "Clearstream"
+      }
+    },
+    {
+      "url": "http://www.apple.com/befr/",
+      "name": "Apple",
+      "category": {
+        "name": "Computer"
+      }
+    },
+    {
+      "url": "http://www.oracle.com/technetwork/java/index.html",
+      "name": "Java",
+      "category": {
+        "name": "Computer"
+      }
+    },
+    {
+      "url": "http://www.pcastuces.com/",
+      "name": "PC Astuces",
+      "category": {
+        "name": "Computer"
+      }
+    },
+    {
+      "url": "http://www.w3schools.com",
+      "name": "w3schools",
+      "category": {
+        "name": "Computer"
+      }
+    },
+    {
+      "url": "http://www.direct-vet.be/",
+      "name": "Direct Vet",
+      "category": {
+        "name": "eCommerce"
+      }
+    },
+    {
+      "url": "http://my.befr.ebay.be/ws/eBayISAPI.dll?MyEbayBeta\u0026_trksid\u003dm37\u0026MyEbay\u003d\u0026guest\u003d1\n\t\t\t",
+      "name": "Mon eBay",
+      "category": {
+        "name": "eCommerce"
+      }
+    },
+    {
+      "url": "http://www.newpharma.be/pharmacie/",
+      "name": "New Pharma",
+      "category": {
+        "name": "eCommerce"
+      }
+    },
+    {
+      "url": "http://www.pixmania.be/be/fr/home.html",
+      "name": "Pixmania",
+      "category": {
+        "name": "eCommerce"
+      }
+    },
+    {
+      "url": "http://www.priceminister.com/",
+      "name": "Price Minister",
+      "category": {
+        "name": "eCommerce"
+      }
+    },
+    {
+      "url": "http://www.jeuxvideo.com/",
+      "name": "Jeux Video.com",
+      "category": {
+        "name": "Fun"
+      }
+    },
+    {
+      "url": "http://www.viedemerde.fr",
+      "name": "Vie de Merde",
+      "category": {
+        "name": "Fun"
+      }
+    },
+    {
+      "url": "http://www.google.be/",
+      "name": "Google",
+      "category": {
+        "name": "General"
+      }
+    },
+    {
+      "url": "http://www.guichet.public.lu/citoyens/fr/index.html",
+      "name": "guichet.lu",
+      "category": {
+        "name": "Impôts"
+      }
+    },
+    {
+      "url": "https://eservices.minfin.fgov.be/taxonweb/app/citizen/public/taxbox/home.do;TAXONWEB_JSESSIONID\u003d9mWTTbZT1m7fQVYxFyv5vg47ShHvFqfLJMTTQLrPLF3sgyLwCB67!1098851098\n\t\t\t",
+      "name": "Tax on Web",
+      "category": {
+        "name": "Impôts"
+      }
+    },
+    {
+      "url": "https://sites.google.com/a/logos-its.com/intranet/",
+      "name": "Intranet",
+      "category": {
+        "name": "Logos"
+      }
+    },
+    {
+      "url": "http://logos01.logos-its.com:9000/syges2/",
+      "name": "Syges 2",
+      "category": {
+        "name": "Logos"
+      }
+    },
+    {
+      "url": "http://www.meteo.be/meteo/view/fr/65239-Accueil.html",
+      "name": "IRM",
+      "category": {
+        "name": "Météo"
+      }
+    },
+    {
+      "url": "http://www.meteobelgique.be",
+      "name": "Météo en Belgique",
+      "category": {
+        "name": "Météo"
+      }
+    },
+    {
+      "url": "http://www.castelloborghese.lu/",
+      "name": "Il Castello Borghese",
+      "category": {
+        "name": "Restaurant"
+      }
+    },
+    {
+      "url": "http://www.facebook.com",
+      "name": "Facebook",
+      "category": {
+        "name": "Social Networks"
+      }
+    },
+    {
+      "url": "https://twitter.com",
+      "name": "Twitter",
+      "category": {
+        "name": "Social Networks"
+      }
+    },
+    {
+      "url": "http://www.rtbf.be/sport/",
+      "name": "RTBF Sport",
+      "category": {
+        "name": "Sport"
+      }
+    },
+    {
+      "url": "http://toto",
+      "name": "toto",
+      "category": {
+        "name": "toto"
+      }
+    },
+    {
+      "url": "http://www.cfl.lu/fr",
+      "name": "CFL",
+      "category": {
+        "name": "Transport"
+      }
+    },
+    {
+      "url": "http://www.belgianrail.be/fr/Home.aspx",
+      "name": "SNCB",
+      "category": {
+        "name": "Transport"
+      }
+    },
+    {
+      "url": "http://www.tgv.com/",
+      "name": "TGV",
+      "category": {
+        "name": "Transport"
+      }
+    },
+    {
+      "url": "http://www.canalplus.fr/",
+      "name": "Canal +",
+      "category": {
+        "name": "TV"
+      }
+    },
+    {
+      "url": "http://you-know-nothing.com/",
+      "name": "Game of Thrones Helper",
+      "category": {
+        "name": "TV"
+      }
+    },
+    {
+      "url": "http://www.rtbf.be",
+      "name": "RTBF",
+      "category": {
+        "name": "TV"
+      }
+    }
+  ],
+  "categoryList": {
+    "toto": {
+      "name": "toto"
+    },
+    "TV": {
+      "name": "TV"
+    },
+    "Banques": {
+      "name": "Banques"
+    },
+    "Logos": {
+      "name": "Logos"
+    },
+    "Clearstream": {
+      "name": "Clearstream"
+    },
+    "Impôts": {
+      "name": "Impôts"
+    },
+    "Restaurant": {
+      "name": "Restaurant"
+    },
+    "eCommerce": {
+      "name": "eCommerce"
+    },
+    "Sport": {
+      "name": "Sport"
+    },
+    "Social Networks": {
+      "name": "Social Networks"
+    },
+    "Météo": {
+      "name": "Météo"
+    },
+    "Computer": {
+      "name": "Computer"
+    },
+    "Chiens": {
+      "name": "Chiens"
+    },
+    "General": {
+      "name": "General"
+    },
+    "Actu": {
+      "name": "Actu"
+    },
+    "Transport": {
+      "name": "Transport"
+    },
+    "Fun": {
+      "name": "Fun"
+    }
+  }
+}
