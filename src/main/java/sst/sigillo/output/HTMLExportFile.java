@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import sst.common.file.output.OutputFile;
+import sst.common.file.replaceFile.ReplaceFile;
 import sst.common.html.AbstractHTMLElement;
 import sst.common.html.HTML;
 import sst.common.html.HTMLDiv;
@@ -20,7 +21,6 @@ import sst.common.html.HTMLUnorderedList;
 import sst.common.html.table.HTMLTable;
 import sst.common.html.table.HTMLTableCell;
 import sst.common.html.table.HTMLTableRow;
-import sst.common.replaceFile.ReplaceFile;
 import sst.sigillo.model.Bookmark;
 import sst.sigillo.model.Category;
 import sst.sigillo.model.SigilloModel;
