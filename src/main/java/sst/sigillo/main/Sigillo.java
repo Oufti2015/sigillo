@@ -3,6 +3,8 @@ package sst.sigillo.main;
 import java.io.File;
 import java.io.IOException;
 
+import org.jboss.weld.environment.se.Weld;
+import org.jboss.weld.environment.se.WeldContainer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +38,7 @@ import sst.sigillo.intrfc.JSONInterface;
 import sst.sigillo.intrfc.XMLInterface;
 import sst.sigillo.model.Bookmark;
 import sst.sigillo.model.SigilloModel;
-import sst.sigillo.output.HTMLExportFile;
+import sst.sigillo.output.ExportEngine;
 
 public class Sigillo extends Application { // NO_UCD (unused code)
 
@@ -47,8 +49,10 @@ public class Sigillo extends Application { // NO_UCD (unused code)
     private TextField categoryTextField;
     private Button createButton;
     // Web color value set as the currently selected color
-    private ColorPicker colorPickerHeader = new ColorPicker(Color.web(SigilloModel.getInstance().getData().getHeaderColor()));
-    private ColorPicker colorPickerContent = new ColorPicker(Color.web(SigilloModel.getInstance().getData().getBookmarkColor()));
+    private ColorPicker colorPickerHeader = new ColorPicker(
+	    Color.web(SigilloModel.getInstance().getData().getHeaderColor()));
+    private ColorPicker colorPickerContent = new ColorPicker(
+	    Color.web(SigilloModel.getInstance().getData().getBookmarkColor()));
     ComboBox<String> comboBox = new ComboBox<>();
 
     @Override
@@ -132,7 +136,8 @@ public class Sigillo extends Application { // NO_UCD (unused code)
     }
 
     public static String toRGBCode(Color color) {
-	return String.format("#%02X%02X%02X", (int) (color.getRed() * 255), (int) (color.getGreen() * 255), (int) (color.getBlue() * 255)).toUpperCase();
+	return String.format("#%02X%02X%02X", (int) (color.getRed() * 255), (int) (color.getGreen() * 255),
+		(int) (color.getBlue() * 255)).toUpperCase();
     }
 
     private Node createForm() {
@@ -201,14 +206,17 @@ public class Sigillo extends Application { // NO_UCD (unused code)
     }
 
     public void export2HTML() {
+	final Weld weld = new Weld();
+	WeldContainer weldContainer = weld.initialize();
+
+	final ExportEngine exportManager = weldContainer.instance().select(ExportEngine.class).get();
 	try {
-	    new HTMLExportFile().export2HTML(new File("index.html"));
-	    // new HTMLExportMultipleFiles().export2HTML(new
-	    // File("index.html"));
+	    exportManager.getExport().export2HTML(new File("index.html"));
 	} catch (IOException e) {
-	    logger.error("Cannot create outputfile", e);
-	    System.exit(-1);
+	    logger.error("Cannot export to HTML", e);
 	}
+
+	weld.shutdown();
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -277,18 +285,19 @@ public class Sigillo extends Application { // NO_UCD (unused code)
 	// Boolean>("important"));
 	importantCol.setEditable(true);
 
-	importantCol.setCellValueFactory(new Callback<CellDataFeatures<Bookmark, CheckBox>, ObservableValue<CheckBox>>() {
+	importantCol
+		.setCellValueFactory(new Callback<CellDataFeatures<Bookmark, CheckBox>, ObservableValue<CheckBox>>() {
 
-	    @Override
-	    public ObservableValue<CheckBox> call(CellDataFeatures<Bookmark, CheckBox> arg0) {
-		Bookmark user = arg0.getValue();
-		CheckBox checkBox = new CheckBox();
+		    @Override
+		    public ObservableValue<CheckBox> call(CellDataFeatures<Bookmark, CheckBox> arg0) {
+			Bookmark user = arg0.getValue();
+			CheckBox checkBox = new CheckBox();
 
-		checkBox.selectedProperty().setValue(user.isImportant());
+			checkBox.selectedProperty().setValue(user.isImportant());
 
-		return new SimpleObjectProperty<>(checkBox);
-	    }
-	});
+			return new SimpleObjectProperty<>(checkBox);
+		    }
+		});
 	tableView.getColumns().addAll(nameCol, categoryCol, importantCol, urlCol);
 
 	export2HTML();

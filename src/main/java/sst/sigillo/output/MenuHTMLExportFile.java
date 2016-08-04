@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Date;
 
+import javax.enterprise.inject.Default;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,16 +20,14 @@ import sst.common.html.HTMLHyperlinks;
 import sst.common.html.HTMLListItem;
 import sst.common.html.HTMLThemeBreak;
 import sst.common.html.HTMLUnorderedList;
-import sst.common.html.table.HTMLTable;
-import sst.common.html.table.HTMLTableCell;
-import sst.common.html.table.HTMLTableRow;
 import sst.sigillo.model.Bookmark;
-import sst.sigillo.model.Category;
 import sst.sigillo.model.SigilloModel;
 
-public class HTMLExportFile {
-    private static Logger logger = LoggerFactory.getLogger(HTMLExportFile.class);
+@Default
+public class MenuHTMLExportFile implements Export {
+    private static Logger logger = LoggerFactory.getLogger(MenuHTMLExportFile.class);
 
+    @Override
     public void export2HTML(File file) throws IOException {
 	createCSS();
 
@@ -37,7 +37,8 @@ public class HTMLExportFile {
 	html.head().title("Oufti Bookmarks").styleSheet("menu.css").styleSheet("sigillo.css").javaScript("sigillo.js");
 	// html.body().footer("Sigillo - St&eacute;phane STIENNON - " + new
 	// Date()).addChild(createBookmarksTable(SigilloModel.getInstance().getOrderedBookmarkList()));
-	html.body().footer("Sigillo - St&eacute;phane STIENNON - " + new Date()).addChild(createBookmarksMenu(SigilloModel.getInstance().getOrderedBookmarkList()));
+	html.body().footer("Sigillo - St&eacute;phane STIENNON - " + new Date())
+		.addChild(createBookmarksMenu(SigilloModel.getInstance().getOrderedBookmarkList()));
 	try (OutputFile output = new OutputFile(file)) {
 	    output.println(html.toString());
 	}
@@ -51,53 +52,6 @@ public class HTMLExportFile {
 	replace.add("<%COLOR_CONTENT%>", SigilloModel.getInstance().getData().getBookmarkColor());
 	replace.run("data/sigillo.template.css", "sigillo.css");
 	logger.info("Creation of CSS Sheet done");
-    }
-
-    @SuppressWarnings("unused")
-    private AbstractHTMLElement createBookmarksTable(Collection<Bookmark> list) {
-
-	HTMLTable table = new HTMLTable();
-	HTMLTableRow row = table.newRow();
-	HTMLTableCell cell = null;
-	HTMLTable catTable = null;
-
-	String currentCategory = null;
-	int i = 0;
-
-	for (Bookmark bm : list) {
-	    if (null == currentCategory || !currentCategory.equals(bm.getCategoryName())) {
-		if (null != catTable) {
-		    cell.addChild(catTable);
-		    // row.addTableCell(cell);
-		}
-
-		if (7 == i) {
-		    row = table.newRow();
-		    i = 0;
-		}
-
-		cell = row.newCell();
-		cell.classId("category");
-		catTable = new HTMLTable();
-		setCategory(catTable, bm.getCategory());
-
-		currentCategory = bm.getCategory().getName();
-		i++;
-	    }
-	    HTMLTableRow catRow = catTable.newRow();
-	    HTMLTableCell catCell = catRow.newCell();
-	    catCell.addChild(new HTMLHyperlinks().href(bm.getUrl()).target("_blank").textContent(bm.getName()));
-	    catCell.classId("bookmark");
-	}
-	if (null != catTable) {
-	    cell.addChild(catTable);
-	}
-
-	return table;
-    }
-
-    private void setCategory(HTMLTable catTable, Category category) {
-	catTable.newRow().newHead().textContent(category.getName());
     }
 
     private HTMLUnorderedList newLine(HTMLDiv div) {
